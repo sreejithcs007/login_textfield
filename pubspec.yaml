@@ -1,7 +1,8 @@
 name: login_textfield
 description: "A new Flutter project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/sreejithcs007/login_textfield.git
+
 
 environment:
   sdk: '>=3.4.1 <4.0.0'
