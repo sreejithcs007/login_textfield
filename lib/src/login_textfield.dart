@@ -78,7 +78,7 @@ class LoginTextfield extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 8.0,top: 8),
+          padding: const EdgeInsets.only(left: 8.0, top: 8),
           child: Text(
             headerName ?? "",
             style: TextStyle(
@@ -95,7 +95,7 @@ class LoginTextfield extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height:10,
+          height: 10,
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -108,11 +108,14 @@ class LoginTextfield extends StatelessWidget {
               suffixIcon: suffixIcon,
               hintText: hintText,
               label: label,
-              border: border,
+              border: border ??
+                  OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(6),
+                      borderSide: const BorderSide(color: Colors.grey)),
               hintStyle: hintStyle,
               fillColor: fillColor ?? Colors.grey.withOpacity(0.3),
               filled: filled ?? true,
-              contentPadding: contentPadding ?? EdgeInsets.all(10),
+              contentPadding: contentPadding ?? const EdgeInsets.all(10),
               enabled: enabled,
               disabledBorder: disabledBorder,
               enabledBorder: enabledBorder,
