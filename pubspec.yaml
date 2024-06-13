@@ -3,7 +3,6 @@ description: "A new Flutter project."
 version: 0.0.1
 homepage: https://github.com/sreejithcs007/login_textfield.git
 
-
 environment:
   sdk: '>=3.4.1 <4.0.0'
   flutter: ">=1.17.0"
