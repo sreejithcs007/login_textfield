@@ -77,18 +77,21 @@ class LoginTextfield extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          headerName ?? "",
-          style: TextStyle(
-            fontSize: headerfontSized ?? 20,
-            fontWeight: headerfontWeight ?? FontWeight.bold,
-            color: headercolor ?? Colors.black,
-            backgroundColor: headerbackgroundcolor,
-            fontStyle: headerfontStyle,
-            overflow: headeroverflow,
-            wordSpacing: headerwordSpacing,
-            height: headerheight,
-            decoration: headerdecoration,
+        Padding(
+          padding: const EdgeInsets.only(left: 8.0,top: 8),
+          child: Text(
+            headerName ?? "",
+            style: TextStyle(
+              fontSize: headerfontSized ?? 20,
+              fontWeight: headerfontWeight ?? FontWeight.bold,
+              color: headercolor ?? Colors.black,
+              backgroundColor: headerbackgroundcolor,
+              fontStyle: headerfontStyle,
+              overflow: headeroverflow,
+              wordSpacing: headerwordSpacing,
+              height: headerheight,
+              decoration: headerdecoration,
+            ),
           ),
         ),
         const SizedBox(
