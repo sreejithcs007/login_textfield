@@ -1,5 +1,6 @@
-import 'package:custom_filled_button_package/custom_filled_button_package.dart';
+// import 'package:custom_filled_button_package/custom_filled_button_package.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class LoginTextfield extends StatelessWidget {
   const LoginTextfield(
@@ -35,7 +36,7 @@ class LoginTextfield extends StatelessWidget {
       this.filled,
       this.fillColor,
       this.hintStyle,
-      this.border});
+      this.border, this.onPressed});
 
   final String? headerName;
   final double? headerfontSized;
@@ -72,12 +73,17 @@ class LoginTextfield extends StatelessWidget {
   final TextStyle? hintStyle;
   final InputBorder? border;
 
+  final void Function()? onPressed;
+
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        
+        Lottie.network("https://lottie.host/8de249b8-bce0-4ce7-9069-3ebeda4174ef/X2qqjW7Yah.json"),
+        
         Padding(
           padding: const EdgeInsets.only(left: 8.0, top: 8),
           child: Text(
@@ -129,10 +135,11 @@ class LoginTextfield extends StatelessWidget {
           ),
         ),
 
-        CustomFilledButton(
-          icon: Icons.golf_course,
-          buttonText: "Login",
-        )
+        // CustomFilledButton(
+        //   icon: Icons.golf_course,
+        //   buttonText: "Login",
+        //   onPressed: onPressed,
+        // )
 
 
       ],
