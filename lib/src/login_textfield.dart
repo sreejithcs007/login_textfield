@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class LoginTextfield extends StatelessWidget {
   const LoginTextfield(
       {super.key,
-      this.headertext,
+      this.headerName,
       this.headerfontSized,
       this.headerfontWeight,
       this.headercolor,
@@ -13,7 +13,7 @@ class LoginTextfield extends StatelessWidget {
       this.headerwordSpacing,
       this.headerheight,
       this.headerdecoration,
-      required this.controller,
+      this.controller,
       this.prefixIcon,
       this.hintText,
       this.suffixIcon,
@@ -36,7 +36,7 @@ class LoginTextfield extends StatelessWidget {
       this.hintStyle,
       this.border});
 
-  final String? headertext;
+  final String? headerName;
   final double? headerfontSized;
   final FontWeight? headerfontWeight;
   final Color? headercolor;
@@ -47,7 +47,7 @@ class LoginTextfield extends StatelessWidget {
   final double? headerheight;
   final TextDecoration? headerdecoration;
 
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final Widget? prefixIcon;
   final String? hintText;
   final Widget? suffixIcon;
@@ -74,9 +74,10 @@ class LoginTextfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
-          headertext ?? "",
+          headerName ?? "",
           style: TextStyle(
             fontSize: headerfontSized ?? 20,
             fontWeight: headerfontWeight ?? FontWeight.bold,
@@ -92,31 +93,34 @@ class LoginTextfield extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        TextFormField(
-          controller: controller,
-          decoration: InputDecoration(
-            prefixIcon: prefixIcon,
-            prefix: prefix,
-            suffixText: suffixText,
-            suffixIcon: suffixIcon,
-            hintText: hintText,
-            label: label,
-            border: border,
-            hintStyle: hintStyle,
-            fillColor: fillColor ?? Colors.grey,
-            filled: filled ?? true,
-            contentPadding: contentPadding ?? EdgeInsets.all(10),
-            enabled: enabled,
-            disabledBorder: disabledBorder,
-            enabledBorder: enabledBorder,
-            error: error,
-            errorBorder: errorBorder,
-            errorText: errorText,
-            errorStyle: errorStyle,
-            helper: helper,
-            hintMaxLines: hintMaxLines,
-            focusColor: focusColor,
-            helperText: helperText,
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: TextFormField(
+            controller: controller,
+            decoration: InputDecoration(
+              prefixIcon: prefixIcon,
+              prefix: prefix,
+              suffixText: suffixText,
+              suffixIcon: suffixIcon,
+              hintText: hintText,
+              label: label,
+              border: border,
+              hintStyle: hintStyle,
+              fillColor: fillColor ?? Colors.grey.withOpacity(0.3),
+              filled: filled ?? true,
+              contentPadding: contentPadding ?? EdgeInsets.all(10),
+              enabled: enabled,
+              disabledBorder: disabledBorder,
+              enabledBorder: enabledBorder,
+              error: error,
+              errorBorder: errorBorder,
+              errorText: errorText,
+              errorStyle: errorStyle,
+              helper: helper,
+              hintMaxLines: hintMaxLines,
+              focusColor: focusColor,
+              helperText: helperText,
+            ),
           ),
         )
       ],
