@@ -5,6 +5,6 @@ class Hello extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("Hello");
+    return Text("Hello",style: TextStyle(color: Colors.black),);
   }
 }
