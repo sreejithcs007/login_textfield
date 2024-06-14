@@ -80,10 +80,7 @@ class LoginTextfield extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        
-        Lottie.network("https://lottie.host/8de249b8-bce0-4ce7-9069-3ebeda4174ef/X2qqjW7Yah.json"),
-        
+      children: [  
         Padding(
           padding: const EdgeInsets.only(left: 8.0, top: 8),
           child: Text(
@@ -135,11 +132,6 @@ class LoginTextfield extends StatelessWidget {
           ),
         ),
 
-        // CustomFilledButton(
-        //   icon: Icons.golf_course,
-        //   buttonText: "Login",
-        //   onPressed: onPressed,
-        // )
 
 
       ],
